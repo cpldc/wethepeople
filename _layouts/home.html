@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% include libraries.html %}
+
+</head>
+<body>   
+    <header>
+        <section id="cpl-header" class="cpl-header-md">
+            <div class="container-fluid ">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-left" id="logo-fullSize">
+                            <a href="https://www.chipublib.org/">
+                                <img id="cpl-logo-lg" src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library" />
+                            </a>
+                            <h2 id="cpl-logo-text">
+                                <a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/jekyll/">
+                                    Digital Collections
+                                </a>
+                            </h2>
+                        </div>
+                        <img id="wtp-logo" src="/assets/images/header_md.svg" alt="">
+                    </div>
+                </div>
+        </section>
+    </header>
+    <main class="container article-container">
+        <div class="row wtp-navbar">
+            <div class="col">Home</div>
+            <div class="col">About WTPM</div>
+            <div class="col">Archive</div>
+            <div class="col">Youth</div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                {% for post in site.posts %}
+                <h3 class="article-title">{{ post.title }}</h3>
+                <span class="author">{{post.author.first_name}} {{post.author.last_name}}</span>
+                <br />
+                <span class="date">{{post.date | date_to_string }}</span>
+
+                <span class="article-body">
+                        {{ post.excerpt }}
+                </span>
+                <p>
+                    <small>
+                        Tags:
+                        {% for tag in post.tags %}
+                                <a class="tags {% if forloop.last == true %}tags-last{% endif %}" href="/tags/{{ tag }}/">{{ tag }}</a>
+                        {% endfor %}
+                        <br />
+                        Categories: 
+                    </small>
+                </p>
+                {% endfor %}
+            </div>
+            <div class="col-4">
+                <div class="nav">
+                    <div class="navrow">
+                        <input type="text" />
+                        <div id="searchText" class="float-right">Search</div>
+                    </div>
+                    <div class="navrow tagslist">
+                        <ul id="tagslist">
+                            {% comment %}
+                            <span id="tagtitle">Tags</span>
+                            {% assign tags =  site.posts | map: 'tags' | join: ',' | join: ',' | split: ',' | uniq | sort %}
+                            {% for tag in tags %}
+                                <li class="tagList" >{{tag}}</li>
+                            {% endfor %}
+                            {% endcomment %}
+                        </ul>
+                    </div>
+                    <div class="navrow">
+                        date slider
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

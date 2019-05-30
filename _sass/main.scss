@@ -32,10 +32,12 @@ main {
 .article-container {
     padding-top: 140px;
 }
+.article-title {
+    margin-top: 25px;
+}
 .article-title, .article-body {
     font-family: "Baskerville2", "Baskerville", Times, serif;
     line-height: 140%;
-    margin-top: 25px;
 }
 .nav {
     font-family: "Baskerville2", "Baskerville", Times, serif;
@@ -68,8 +70,32 @@ main {
     border-right: 1px solid #0275d8;
     // padding-left: 3px;
     padding-right: 3px;
+    text-transform: capitalize;
 }
 .tags-last {
     border-right: 0;
     // padding-left: 3px;
+}
+.author, .date {
+    font-family: Arial, Verdana, sans-serif;
+    font-style: italic;
+}
+.author {
+    font-size: 0.9rem;
+}
+.date {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+.blog-image {
+    width: 50%;
+    margin: auto;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.blog-image img {
+    width: 100%;
+    margin: auto;
 }

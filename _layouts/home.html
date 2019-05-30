@@ -38,14 +38,13 @@
         <div class="row">
             <div class="col-6">
                 {% for post in site.posts %}
-                <h3 class="article-title">{{ post.title }}</h3>
-                <span class="author">{{post.author.first_name}} {{post.author.last_name}}</span>
-                <br />
-                <span class="date">{{post.date | date_to_string }}</span>
+                <h3 class="article-title"><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <div class="author">{{post.author.first_name}} {{post.author.last_name}}</div>
+                <div class="date">{{post.date | date_to_string }}</div>
 
-                <span class="article-body">
+                <div class="article-body">
                         {{ post.excerpt }}
-                </span>
+                </div>
                 <p>
                     <small>
                         Tags:
@@ -67,6 +66,7 @@
                     <div class="navrow tagslist">
                         <ul id="tagslist">
                             {% comment %}
+                            this results in about 1400 tags, many redundant
                             <span id="tagtitle">Tags</span>
                             {% assign tags =  site.posts | map: 'tags' | join: ',' | join: ',' | split: ',' | uniq | sort %}
                             {% for tag in tags %}

@@ -38,13 +38,12 @@
         <div class="row">
             <div class="col-6">
                 <h3 class="article-title">{{ page.title }}</h3>
-                <span class="author">{{page.author.first_name}} {{page.author.last_name}}</span>
-                <br />
-                <span class="date">{{page.date | date_to_string }}</span>
+                <div class="author">by {{page.author.first_name}} {{page.author.last_name}}</div>
+                <div class="date">{{page.date | date_to_string }}</div>
 
-                <span class="article-body">
+                <div class="article-body">
                     {{ content }}
-                </span>
+                </div>
                 <p>
                     <small>
                         {% for tag in page.tags %}

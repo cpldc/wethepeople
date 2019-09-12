@@ -8,33 +8,8 @@
 
 </head>
 <body>   
-    <header>
-        <section id="cpl-header" class="cpl-header-md">
-            <div class="container-fluid ">
-                <div class="container">
-                    <div class="row">
-                        <div class="header-left" id="logo-fullSize">
-                            <a href="https://www.chipublib.org/">
-                                <img id="cpl-logo-lg" src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library" />
-                            </a>
-                            <h2 id="cpl-logo-text">
-                                <a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/jekyll/">
-                                    Digital Collections
-                                </a>
-                            </h2>
-                        </div>
-                        <img id="wtp-logo" src="assets/logos/header_md.svg" alt="">
-                    </div>
-                </div>
-        </section>
-    </header>
+    {% include header.html %}
     <main class="container article-container">
-        <div class="row wtp-navbar">
-            <div class="col">Home</div>
-            <div class="col">About WTPM</div>
-            <div class="col">Archive</div>
-            <div class="col">Youth</div>
-        </div>
         <div class="row">
             <div class="col-6">
                 <h3 class="article-title">{{ page.title }}</h3>
@@ -53,27 +28,7 @@
                 </p>
             </div>
             <div class="col-4">
-                <div class="nav">
-                    <div class="navrow">
-                        <input type="text" />
-                        <div id="searchText" class="float-right">Search</div>
-                    </div>
-                    <div class="navrow tagslist">
-                        <ul id="tagslist">
-                            {% comment %}
-                            <span id="tagtitle">Tags</span>
-                            {% assign tags =  site.posts | map: 'tags' | join: ',' | join: ',' | split: ',' | uniq | sort %}
-                            {% for tag in tags %}
-                                <li class="tagList" >{{tag}}</li>
-                            {% endfor %}
-                            {% endcomment %}
-                        </ul>
-                    </div>
-                    <div class="navrow">
-                        date slider
-                    </div>
-                   
-                </div>
+                {% include searchbox.html %}
             </div>
         </div>
     </main>

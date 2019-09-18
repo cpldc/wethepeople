@@ -16,11 +16,6 @@ header {
 }
 .header-left  {
     width: 260px;
-    & #about {
-        margin: 0;
-        font-size: 0.9rem;
-        padding-top: 3px;
-    }
     & h2 {
 
         font-size: 1rem;
@@ -34,19 +29,26 @@ header {
             text-decoration: underline;
         }
     }
+    & #about {
+        font-size: 0.9rem;
+        padding-top: 3px;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 0;
+        }
+    }
 }
 .header-right {
     position: relative;
     & a {
         color: black;
         &:hover{
-
             text-decoration: none;
         }
     }
+   
 }
 header h1, header h3 {
-
     font-family: "Baskerville2", "Baskerville", Times, serif;
     text-align: center;
 }
@@ -59,7 +61,7 @@ header h3 {
 header img { 
     width: 100%;
 }
-header img#wtp-logo {
+header #wtp-logo {
     width: 240px;
     position: absolute; 
     top: 42px; 
@@ -181,20 +183,63 @@ iframe {
         margin: 0;
     }
 }
+.flexcontainer {
+    display: flex;
+    & img {
+        flex-basis: 100px;
+    }
+    & p {
+        flex: 1;
+        padding-right: 40px;
+    }
+}
+.creditline {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+h3, h4, p {
+    font-family: "Baskerville2", "Baskerville", Times, serif;
+}
+.miscdl {
+    font-family: "Baskerville2", "Baskerville", Times, serif;
+    margin-bottom: 30px;
+    & dt {
+        margin-bottom: 10px;
+    }
+    & dd {
+        margin-left: 25px;
+    }
+}
+.misc {
+    font-family: "Baskerville2", "Baskerville", Times, serif;
+    text-align: justify;
+    & ul {
+        padding-left: 0;
+        list-style-type: none;
+    }
+}
+.boddl {
+    font-family: "Baskerville2", "Baskerville", Times, serif;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    position: relative;
+    & dt::before {
+        position: absolute;
+        left: 0;
+        content: "\00BB \0020";
+    }
+}
 #menu {
-    display: none;
+    position: absolute;
+    left: -10px;
+    width: auto;
     background: white;
-    border: 1px solid black;
+    padding-right: 7px;
     & ul {
         list-style: none;
         padding-left: 10px;
     }
     & li {
-    }
-}
-#about a:hover {
-    color: blue;
-    & #menu {
-        display: block;
+        font-size: 0.9rem;
     }
 }

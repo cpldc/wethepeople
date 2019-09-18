@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
     {% include libraries.html %}
 </head>
-<body>   
+<body class="misc">   
     {% include header.html %}
     <main class="container article-container">
         <div class="row">
             <div class="col-6">
                 {{ content }}
-                     
             </div>
             <div class="col-4">{% include searchbox.html %}</div>
         </div>

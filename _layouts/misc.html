@@ -7,14 +7,14 @@
     <title>{{ page.title }}</title>
     {% include libraries.html %}
 </head>
-<body class="misc">   
+<body>   
     {% include header.html %}
-    <main class="container article-container">
+    <main class="misc container article-container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 {{ content }}
             </div>
-            <div class="col-4">{% include searchbox.html %}</div>
+            <div class="col-12 col-lg-4">{% include searchbox.html %}</div>
         </div>
     </main>
 </body>

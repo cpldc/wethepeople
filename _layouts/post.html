@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% include libraries.html %}
-
 </head>
 <body>   
     {% include header.html %}
     <main class="container article-container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 <h3 class="article-title">{{ page.title }}</h3>
                 <div class="author">by {{page.author.first_name}} {{page.author.last_name}}</div>
                 <div class="date">{{page.date | date_to_string }}</div>
@@ -22,12 +21,12 @@
                 <p>
                     <small>
                         {% for tag in page.tags %}
-                                <a class="tags {% if forloop.last == true %}tags-last{% endif %}" href="/tags/{{ tag }}/">{{ tag }}</a>
+                            <a class="tags {% if forloop.last == true %}tags-last{% endif %}" href="/tags/{{ tag }}/">{{ tag }}</a>
                         {% endfor %}
                     </small>
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 {% include searchbox.html %}
             </div>
         </div>

@@ -11,7 +11,7 @@
     {% include header.html %}
     <main class="container article-container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
                 {% for post in site.posts %}
                 <h3 class="article-title"><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                 <div class="author">
@@ -34,7 +34,7 @@
                 </p>
                 {% endfor %}
             </div>
-            <div class="col-4">{% include searchbox.html %}</div>
+            <div class="col-12 col-lg-4">{% include searchbox.html %}</div>
         </div>
     </main>
 </body>

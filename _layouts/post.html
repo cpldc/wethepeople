@@ -8,7 +8,7 @@
 </head>
 <body>   
     {% include header.html %}
-    <main class="container article-container">
+    <main id="maincontentcontainer" class="container article-container">
         <div class="row">
             <div class="col-12 col-lg-6">
                 <h3 class="article-title">{{ page.title }}</h3>
@@ -21,7 +21,7 @@
                 <p>
                     <small>
                         {% for tag in page.tags %}
-                            <a class="tags {% if forloop.last == true %}tags-last{% endif %}" href="/tags/{{ tag }}/">{{ tag }}</a>
+                            <a class="tags {% if forloop.last == true %}tags-last{% endif %}" onclick="tagsearch('{{ tag }}')">{{ tag }}</a>
                         {% endfor %}
                     </small>
                 </p>

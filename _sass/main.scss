@@ -1,4 +1,11 @@
 // cpl header
+.article-container h3, .article-container h4, .miscdl, .misc, .boddl, header h1, header h3, ul.pager, .tagstuff h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.issuesheader, .cpl-logo-text h2 a, .author, .date, .article-body, .author, .date, .tagstuff li {
+    font-family: 'Roboto', sans-serif;
+}
 header {
     margin-bottom: 15px;
     width: 100%;
@@ -11,12 +18,15 @@ header {
     border-bottom: 2px solid #666;
     height: 131px;
 } 
-.cpl-logo-text h2 a {
-    font-family: 'Lato', sans-serif !important;
-}
 #cpl-logo-lg {
     max-height: 65px;
     margin: 15px 0 8px 0;
+}
+.tagstuff h3 {
+    margin-top: 30px;
+}
+.taglist {
+    list-style-type: none;
 }
 .header-left  {
     width: 260px;
@@ -60,7 +70,6 @@ header {
     margin: auto;
 }
 header h1, header h3 {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
     text-align: center;
 }
 header h1 {
@@ -88,7 +97,6 @@ main {
     padding-top: 140px;
 }
 .article-title, .article-body {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
     line-height: 140%;
 }
 .nav {
@@ -123,7 +131,6 @@ main {
     // padding-left: 3px;
 }
 .author, .date {
-    font-family: Arial, Verdana, sans-serif;
     font-style: italic;
 }
 .author {
@@ -181,9 +188,6 @@ iframe {
 }
 
 // etc
-.pagesubheader {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
-}
 .picturepages {
     text-align: left;
     margin-bottom: 40px;
@@ -205,11 +209,7 @@ iframe {
     font-size: 0.9rem;
     font-style: italic;
 }
-.article-container h3, .article-container h4, .article-container p {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
-}
 .miscdl {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
     margin-bottom: 30px;
     & dt {
         margin-bottom: 10px;
@@ -219,7 +219,6 @@ iframe {
     }
 }
 .misc {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
     text-align: justify;
     & ul {
         padding-left: 0;
@@ -227,7 +226,6 @@ iframe {
     }
 }
 .boddl {
-    font-family: "Baskerville2", "Baskerville", Times, serif;
     margin-bottom: 30px;
     padding-left: 10px;
     position: relative;
@@ -287,7 +285,6 @@ iframe {
     }
 }
 .issuesheader {
-    font-family: 'Lato', sans-serif;
     margin-bottom: 0;
 }
 .nineseven { flex: 3; }
@@ -318,3 +315,5 @@ iframe {
     #response-lg {display: block;}
     #response-sm {display: none;}
   }
+  ul.pager { text-align: center; list-style: none; }
+  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}

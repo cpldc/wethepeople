@@ -1,7 +1,7 @@
 ---
 layout: misc
 title: 'We the People Media: Funders'
-permalink: /funders/
+permalink: /funders.html
 ---
 <h3>Funders</h3>
 <p>Below are links to the foundations who support We The People Media’s work:</p>

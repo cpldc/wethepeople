@@ -1,7 +1,7 @@
 ---
 layout: misc
 title: 'We the People Media: Staff'
-permalink: /staff/
+permalink: /staff.html
 ---
 <h3>
     Executive Staff
@@ -13,6 +13,6 @@ permalink: /staff/
 </p>
 </div>
 <div class="fleximg">
-<img src="/assets/ethanMichaeli.jpg" alt="A man sitting on a couch" />
+<img src="{{ site.baseurl }}/assets/ethanMichaeli.jpg" alt="A man sitting on a couch" />
 </div>
 </div>

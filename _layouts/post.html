@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
     {% include libraries.html %}
 </head>
 <body>   
@@ -12,7 +13,8 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <h3 class="article-title">{{ page.title }}</h3>
-                <div class="author">by {{page.author.first_name}} {{page.author.last_name}}</div>
+                {% assign displaySize = page.author.display_name | size %}
+                <div class="author">by {% if displaySize > 0 %}{{page.author.display_name}}{% else %}{{page.author.first_name }}{{page.author.last_name }}{% endif %}</div>
                 <div class="date">{{page.date | date_to_string }}</div>
 
                 <div class="article-body">
@@ -21,7 +23,7 @@
                 <p>
                     <small>
                         {% for tag in page.tags %}
-                            <a class="tags {% if forloop.last == true %}tags-last{% endif %}" onclick="tagsearch('{{ tag }}')">{{ tag }}</a>
+                            <a class="tags {% if forloop.last == true %}tags-last{% endif %}" href="{{site.baseurl}}/tags.html#{{tag}}">{{ tag }}</a>
                         {% endfor %}
                     </small>
                 </p>

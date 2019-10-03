@@ -1,13 +1,16 @@
-<div id="search-container">  <div class="about">
-    <div id="about" onclick="toggleMenu()">Search</div>
-    <input type="text" id="search-input" placeholder="Search All Blog Posts...">
-    <ul id="results-container"></ul>
+<div id="search-container"> 
+    <div class="about">
+        <div id="about" onclick="toggleMenu()">Search</div>
+        <input type="text" id="search-input" placeholder="Search All Blog Posts...">
+        <ul id="results-container"></ul>
+    </div>
 </div>
-<script src="/assets/js/simple-jekyll-search.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js" type="text/javascript"></script>
 <script>
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        json: '/search.json'
+        json: '{{ site.baseurl }}/search.json',
+        searchResultTemplate: '<li><a href="{{site.baseurl}}{url}" title="{desc}">{title}</a></li>'
     });
 </script>

@@ -2,11 +2,13 @@ title: We the People Media Residents' Journal
 email: webmaster@chipublib.org
 description: >- 
   Archive of the We the People Media Residents' Journal
-baseurl: "" 
+baseurl: "/customizations/global/pages/WeThePeople" 
 url: "" 
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: chipublib
+github_username: cpldc
 
+
+permalink: /:title:output_ext
 markdown: kramdown
 theme: minima
 plugins:
@@ -18,7 +20,7 @@ excerpt_separator: <!--more-->
 # The values here represent the defaults if nothing is set
 pagination:
   enabled: true
-  per_page: 10
+  per_page: 20
 
   # The permalink structure for the paginated pages (this can be any level deep)
   # permalink: '/page/:num/' # Pages are index.html inside this folder (default)

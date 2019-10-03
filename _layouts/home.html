@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
     {% include libraries.html %}
 
 </head>
@@ -28,7 +29,9 @@
                     <small>
                         Tags:
                         {% for tag in post.tags %}
-                                <a class="tags {% if forloop.last == true %}tags-last{% endif %}" onclick="tagsearch('{{ tag }}')">{{ tag }}</a>
+                                <!-- <a class="tags {% if forloop.last == true %}tags-last{% endif %}" onclick="tagsearch('{{ tag }}')">{{ tag }}</a> -->
+                                <a class="tags {% if forloop.last == true %}tags-last{% endif %}" href='{{ site.baseurl }}/tags.html#{{tag}}'>{{ tag }}</a>
+                                
                         {% endfor %}
                     </small>
                 </p>
@@ -49,6 +52,7 @@
                 {% endif %}
             </div>
             <div class="col-12 col-lg-4">{% include searchbox.html %}</div>
+
         </div>
     </main>
 </body>

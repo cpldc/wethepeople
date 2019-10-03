@@ -1,7 +1,7 @@
 ---
 layout: misc
 title: 'We the People Media: Participants'
-permalink: /participants/
+permalink: /participants.html
 ---
 <h3>Participating Host Institutions</h3>
 <ul>

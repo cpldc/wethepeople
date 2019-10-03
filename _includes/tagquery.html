@@ -1,0 +1,15 @@
+<div class="tagstuff">
+    <h4>Blog posts tagged <strong id="tagtarget"></strong></h4>
+    <ul id="taglist"></ul>
+</div>
+<script>
+    var currentTag = decodeURI(window.location.hash.substr(1));
+    var strippedTag = currentTag.replace(/\W/g, ' ').replace(/\s\s+/g, ' ')
+    var tagArray = allTags[strippedTag];
+    var tagHtml = '';
+    for (t in tagArray){
+        tagHtml += '<li><a href="/customizations/global/pages/WeThePeople' + tagArray[t][1] + '">' + tagArray[t][0] + '</li>';
+    }
+    $('#tagtarget').empty().append(currentTag);
+    $('#taglist').empty().append(tagHtml);
+</script>

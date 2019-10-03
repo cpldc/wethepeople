@@ -1,7 +1,7 @@
 ---
 layout: misc
 title: 'We the People Media: Press'
-permalink: /press/
+permalink: /press.html
 ---
 <h3>Press</h3>
 <p>

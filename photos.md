@@ -1,7 +1,7 @@
 ---
 layout: misc
 title: 'We the People Media: Pictures'
-permalink: /photos/
+permalink: /photos.html
 ---
 <h2 class="pagesubheader">Pictures</h2>
 <figure class="picturepages"><img title="KarinHawkins" src="https://wethepeoplemedia.org/wp-content/uploads/2010/02/KarinHawkins.jpg" alt="KarinHawkins" height="191" /><figcaption>

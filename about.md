@@ -1,7 +1,7 @@
 ---
 layout: misc
 title: 'We the People Media: About'
-permalink: /about/
+permalink: /about.html
 ---
 <h3>We The People Media</h3>
 <p class="aboutp">We The People Media’s history goes back to 1996, when Ethan Michaeli, previously an investigative reporter with the Chicago Daily Defender newspaper, was hired as the founding Editor in Chief of Residents’ Journal. Conceived as a magazine that would be written for and by public housing tenants, Residents’ Journal was initially funded by the Chicago Housing Authority, with a written guarantee of the newspaper’s independence signed by CHA officials. But in June 1999, a new administration at the CHA terminated the agency’s agreement with Residents’ Journal. The Residents’ Journal staff opted to separate from CHA, forming the not-for-profit organization We The People Media with the support of prominent journalists, scholars, community and business leaders. We The People Media assumed responsibility for Residents’ Journal and the Urban Youth International Journalism Program in August 2000.</p>

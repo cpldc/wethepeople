@@ -28,8 +28,12 @@ header {
 .taglist {
     list-style-type: none;
 }
+.container .header-container {
+    display: flex;
+}
 .header-left  {
-    width: 260px;
+    flex-basis: 200px;
+    width: 200px;
     & h2 {
 
         font-size: 1rem;
@@ -51,9 +55,15 @@ header {
             border-bottom: 0;
         }
     }
+    @media only screen and (max-width: 899px){
+        .header-left {
+            flex-basis: 100px;
+        }
+    }
 }
 .header-right {
     position: relative;
+    flex: 1;
     & a {
         display: block;
         color: black;
@@ -62,6 +72,7 @@ header {
             text-decoration: none;
         }
     }
+    // overflow: auto;
    
 }
 .article-body img {
@@ -79,15 +90,16 @@ header h3 {
     font-style: italic;
 }
 header img { 
-    width: 100%;
+    // width: 100%;
 }
 header #wtp-logo {
     display: block;
     z-index: 0;
     width: 240px;
+    // float: right;
     position: absolute; 
     top: 42px; 
-    right: -70px;;
+    right: -120px;
 }
 // body
 main {
@@ -298,27 +310,57 @@ iframe {
 .single {    flex: 1; }
 
 
+.titlebox {
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+.responsivefont-lg {
+    font-size: calc(12px + 1vw);
+    padding-top: 15px;
+}
+.responsivefont-sm {
+    font-size: calc(10px + 0.85vw);
+}
+@media only screen and (max-width: 450px) {
+    header #wtp-logo { display: none;}
+    .titlebox { width: 100%;}
+    .responsivefont-lg {
+        font-size: calc(14px + 1.1vw);
+        padding-top: 2px;
+    }
+    .responsivefont-sm {
+        font-size: calc(12px + 1vw);
+    }
+}
+@media only screen and (min-width: 2700px) {
+    .responsivefont-lg {
+        font-size: 40px;
+    }
+    .responsivefont-sm {
+        font-size: 33px;
+    }
+}
 @media only screen and (max-width: 899px) {
     /* For tablets: */
     #response-lg {display: none;}
     #response-sm {display: block;}
     .header-left img { width: 65px; margin: 0;}
-    .header-left { width: 100px;}
+    .header-left { width: 100px; max-width: 100px; flex-basis: 100px;}
     .cpl-header-md {height: 100px;}
     header #wtp-logo {top: 11px; right: -200px;}
     .header-right h1 {font-size: 2rem;}
     .header-right h3 {font-size: 1.5rem;}
     #search-container {margin: 10px; width: 75%;}
-  }
-  @media only screen and (min-width: 900px) {
-    /* For desktop: */
+}
+@media only screen and (min-width: 900px) {
     #response-lg {display: block;}
     #response-sm {display: none;}
-  }
-  ul.pager { text-align: center; list-style: none; }
-  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
+}
+ul.pager { text-align: center; list-style: none; }
+ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
 
-  #tagtarget {
-      text-transform: capitalize;
-  }
-  
+#tagtarget {
+    text-transform: capitalize;
+}

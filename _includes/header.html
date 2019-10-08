@@ -2,12 +2,12 @@
     <div class="container-fluid ">
         <section id="cpl-header" class="cpl-header-md">
             <div class="container">
-                <div class="row">
+                <div class="row header-container">
                     <div class="header-left" id="logo-fullSize">
                         <div id="response-lg">
 
                             <a href="https://www.chipublib.org/">
-                                <img id="cpl-logo-lg" src="https://cor-liv-cdn-static.bibliocommons.com/images/IL-CPL/logo.png?1506021413180" alt="Chicago Public Library" />
+                                <img id="cpl-logo-lg" src="{{ site.baseurl }}/assets/logos/cpl-logo-lg.png" alt="Chicago Public Library" />
                             </a>
                             <h2 id="cpl-logo-text">
                                 <a href="https://cdm16818.contentdm.oclc.org/customizations/global/pages/">
@@ -32,9 +32,12 @@
                         </div>
                     </div>
                     <div class="header-right">
-                        <h1><a href="{{ site.baseurl }}/" >We the People Media</a></h1>
-                        <h3><a href="{{ site.baseurl }}/" >Residents' Journal</a></h3>
-                        <img id="wtp-logo" src="{{ site.baseurl }}/assets/logos/skyline.png" alt="">
+                        <div class="titlebox">
+
+                            <h1><a class="responsivefont-lg" href="{{ site.baseurl }}/" >We the People Media</a></h1>
+                            <h3><a class="responsivefont-sm" href="{{ site.baseurl }}/" >Residents' Journal</a></h3>
+                            <img id="wtp-logo" src="{{ site.baseurl }}/assets/logos/skyline.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>

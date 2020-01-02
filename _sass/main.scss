@@ -83,20 +83,13 @@ header {
 header h1, header h3 {
     text-align: center;
 }
-header h1 {
-    font-size: 3rem;
-}
 header h3 {
     font-style: italic;
-}
-header img { 
-    // width: 100%;
 }
 header #wtp-logo {
     display: block;
     z-index: 0;
     width: 240px;
-    // float: right;
     position: absolute; 
     top: 42px; 
     right: -120px;
@@ -317,22 +310,27 @@ iframe {
     position: relative;
 }
 .responsivefont-lg {
+    z-index: 2;
     font-size: calc(12px + 1vw);
     padding-top: 15px;
 }
 .responsivefont-sm {
+    z-index: 2;
     font-size: calc(10px + 0.85vw);
 }
-@media only screen and (max-width: 450px) {
-    header #wtp-logo { display: none;}
+@media only screen and (max-width: 500px) {
+    header #wtp-logo { right: -150px !important;}
     .titlebox { width: 100%;}
     .responsivefont-lg {
-        font-size: calc(14px + 1.1vw);
-        padding-top: 2px;
+        font-size: calc(12px + 1.8vw);
+        padding-top: 10px;
     }
     .responsivefont-sm {
-        font-size: calc(12px + 1vw);
+        font-size: calc(11px + 1.6vw);
     }
+}
+@media only screen and (max-width: 300px) {
+    header #wtp-logo { display: none;}
 }
 @media only screen and (min-width: 2700px) {
     .responsivefont-lg {

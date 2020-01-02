@@ -1,3 +1,0 @@
-for i in *.*; do 
-sed -i -r  's/\[caption id="attachment_([0-9]*?)" align="alignleft" width="([0-9]*?)" caption="(.*?)"]<a href="(.*?)"><img class="(.*?)" title="(.*?)" src="\{\{ site\.baseurl \}\}\/assets\/(.*?)" alt="" width="([0-9]*?)" height="([0-9]*?)" \/><\/a>\[\/caption\]/<figure id="attachment_\1" style="width: 100%"><a href="\4"><img class="size-full wp-image-\1" src="\{\{ site.baseurl \}\}\/assets\/\6.jpg" alt="" style="width: \2;margin: auto;" \/><\/a><figcaption style="width: \2; margin: auto;">\3<\/figcaption><\/figure>/g' $i
-done

@@ -8,7 +8,7 @@
     var tagArray = allTags[strippedTag];
     var tagHtml = '';
     for (t in tagArray){
-        tagHtml += '<li><a href="/customizations/global/pages/WeThePeople' + tagArray[t][1] + '">' + tagArray[t][0] + '</li>';
+        tagHtml += '<li><a href="/customizations/global/pages/wethepeople' + tagArray[t][1] + '">' + tagArray[t][0] + '</li>';
     }
     $('#tagtarget').empty().append(currentTag);
     $('#taglist').empty().append(tagHtml);
